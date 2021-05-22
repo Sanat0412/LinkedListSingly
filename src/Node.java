@@ -52,7 +52,7 @@ class Main{
         list.print();
         list.insertAtBegin(new Node(9));
         list.print();
-
+        list.print();
     }
 }
 
