@@ -49,6 +49,7 @@ class SinglyLinkedList {
             }
             int middle=count/2;
             int i =1;
+            temp=head;
             while (i<middle){
                 temp=temp.next;
                 i+=1;
@@ -79,6 +80,7 @@ class Main{
         list.print();
         list.insertAtBegin(new Node(9));
         list.print();
+        list.insertAtTheMiddle(new Node(99));
         list.print();
     }
 }
