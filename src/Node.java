@@ -60,6 +60,11 @@ class SinglyLinkedList {
         }
     }
 //    delete the node at beginning of the list
+    public void deleteAtBegin(){
+        if (head!=null){
+            head=head.next;
+        }
+    }
 
 //    delete the node at the end of the list
     public void deleteAtEnd(){
@@ -99,7 +104,8 @@ class Main{
         list.print();
         list.deleteAtEnd();
         list.print();
-
+        list.deleteAtBegin();
+        list.print();
     }
 }
 
