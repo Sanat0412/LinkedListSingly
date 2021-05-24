@@ -59,6 +59,21 @@ class SinglyLinkedList {
             temp.next=newnode;
         }
     }
+//    delete the node at beginning of the list
+
+//    delete the node at the end of the list
+    public void deleteAtEnd(){
+        if (head==null || head.next==null){
+            head=null;
+        }
+        else{
+            Node temp=head;
+            while(temp.next.next!=null){
+                temp=temp.next;
+            }
+            temp.next=null;
+        }
+    }
 //    for printing the list
     public void print(){
         if(head!=null){
@@ -82,6 +97,9 @@ class Main{
         list.print();
         list.insertAtTheMiddle(new Node(99));
         list.print();
+        list.deleteAtEnd();
+        list.print();
+
     }
 }
 
