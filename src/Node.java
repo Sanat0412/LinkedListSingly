@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class Node {
     public int data;
@@ -79,6 +79,18 @@ class SinglyLinkedList {
             temp.next=null;
         }
     }
+//    searching any value(user input also) in the list
+    public boolean search(int data){
+        if (head!=null){
+            Node temp=head;
+            while(temp!=null){
+                if (temp.data==data){
+                    return true;
+                }
+                temp=temp.next;
+            }
+        } return false;
+    }
 //    for printing the list
     public void print(){
         if(head!=null){
@@ -106,6 +118,11 @@ class Main{
         list.print();
         list.deleteAtBegin();
         list.print();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the value");
+        int data= sc.nextInt();
+        list.search(data);
+        System.out.println(list.search(data));
     }
 }
 
