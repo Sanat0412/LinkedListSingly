@@ -78,6 +78,22 @@ class SinglyLinkedList {
             head=head.next;
         }
     }
+//    delete the node at the middle of the list
+    public void deleteAtMiddle(){
+        if(head==null || head.next==null){
+            head=null;
+            return;
+        }
+        Node temp=null;
+        Node slow=head;
+        Node fast=head.next;
+        while(fast!=null && fast.next!=null){
+            temp=slow;
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        temp.next=slow.next;
+    }
 
 //    delete the node at the end of the list
     public void deleteAtEnd(){
@@ -122,6 +138,8 @@ class Main{
                 SinglyLinkedList();
         list.insertAtEnd(new Node(4));
         list.insertAtEnd(new Node(7));
+        list.insertAtEnd(new Node(686));
+        list.insertAtEnd(new Node(98));
         list.print();
         list.insertAtBegin(new Node(9));
         list.print();
@@ -131,12 +149,15 @@ class Main{
         list.print();
         list.deleteAtBegin();
         list.print();
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter the value");
-        int data= sc.nextInt();
-        list.search(data);
-        System.out.println(list.search(data));
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("enter the value");
+//        int data= sc.nextInt();
+//        list.search(data);
+//        System.out.println(list.search(data));
         System.out.println(list.findMiddle().data);
+        list.deleteAtMiddle();
+        list.print();
+
     }
 }
 
