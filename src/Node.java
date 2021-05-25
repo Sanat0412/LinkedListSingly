@@ -59,6 +59,19 @@ class SinglyLinkedList {
             temp.next=newnode;
         }
     }
+//    finding the data of the middle of the list by tortoise method
+    public Node findMiddle(){
+        if (head==null){
+            return null;
+        }
+        Node slow=head;
+        Node fast=head.next;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+    }
 //    delete the node at beginning of the list
     public void deleteAtBegin(){
         if (head!=null){
@@ -123,6 +136,7 @@ class Main{
         int data= sc.nextInt();
         list.search(data);
         System.out.println(list.search(data));
+        System.out.println(list.findMiddle().data);
     }
 }
 
