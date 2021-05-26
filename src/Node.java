@@ -120,6 +120,28 @@ class SinglyLinkedList {
             }
         } return false;
     }
+//    inserting the value at nth position
+    public void insertAtNthPosition(Node newNode , int n){
+        if (head==null){
+            head=newNode;
+        }
+        else if(n==1){
+            newNode.next=head;
+            head=newNode;
+        }
+        else{
+            Node temp=head;
+            while(n-->2 && temp!=null){
+                temp=temp.next;
+            }
+            if (temp!=null){
+                newNode.next=temp.next;
+                temp.next=newNode;
+            } else{
+                System.out.println(" List out of range");
+            }
+        }
+    }
 //    for printing the list
     public void print(){
         if(head!=null){
@@ -156,6 +178,8 @@ class Main{
 //        System.out.println(list.search(data));
         System.out.println(list.findMiddle().data);
         list.deleteAtMiddle();
+        list.print();
+        list.insertAtNthPosition(new Node(78),2);
         list.print();
 
     }
