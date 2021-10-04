@@ -12,7 +12,8 @@ public class Node {
 class SinglyLinkedList {
     public Node head;
 
-    public SinglyLinkedList() {
+    public SinglyLinkedList()
+    {
         this.head = null;
     }
 //    inserting the value at the end of the list
