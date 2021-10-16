@@ -28,7 +28,7 @@ class SinglyLinkedList {
             }
             temp.next=newNode;
         } }
-//    inserting the value at the begining of the list
+//    inserting the value at the beginning of the list
     public void insertAtBegin(Node newNode){
         newNode.next=head;
         head=newNode;
@@ -154,7 +154,21 @@ class SinglyLinkedList {
             System.out.println();
         }
     }
-class Main{
+    
+    // to count the length of the LinkedList
+    public int count(){
+            if(head==null){
+                return 0;
+            }
+            int count=0;
+            Node  current=head;
+            while (current!=null){
+                count++;
+                current=current.next;
+            }
+            return  count;
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList list=new
                 SinglyLinkedList();
@@ -181,7 +195,9 @@ class Main{
         list.print();
         list.insertAtNthPosition(new Node(78),2);
         list.print();
+        System.out.println(list.count());
+    }
 
     }
-}
+
 
