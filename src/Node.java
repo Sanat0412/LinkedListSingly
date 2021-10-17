@@ -155,19 +155,7 @@ class SinglyLinkedList {
         }
     }
     
-    // to count the length of the LinkedList
-    public int count(){
-            if(head==null){
-                return 0;
-            }
-            int count=0;
-            Node  current=head;
-            while (current!=null){
-                count++;
-                current=current.next;
-            }
-            return  count;
-    }
+    
 
     public static void main(String[] args) {
         SinglyLinkedList list=new
@@ -195,7 +183,6 @@ class SinglyLinkedList {
         list.print();
         list.insertAtNthPosition(new Node(78),2);
         list.print();
-        System.out.println(list.count());
     }
 
     }
