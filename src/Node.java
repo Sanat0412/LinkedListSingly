@@ -28,7 +28,7 @@ class SinglyLinkedList {
             }
             temp.next=newNode;
         } }
-//    inserting the value at the begining of the list
+//    inserting the value at the beginning of the list
     public void insertAtBegin(Node newNode){
         newNode.next=head;
         head=newNode;
@@ -154,7 +154,9 @@ class SinglyLinkedList {
             System.out.println();
         }
     }
-class Main{
+    
+    
+
     public static void main(String[] args) {
         SinglyLinkedList list=new
                 SinglyLinkedList();
@@ -181,7 +183,8 @@ class Main{
         list.print();
         list.insertAtNthPosition(new Node(78),2);
         list.print();
+    }
 
     }
-}
+
 
