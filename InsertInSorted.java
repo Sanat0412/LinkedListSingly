@@ -1,23 +1,29 @@
-package LinkedList.SinglyLinkedList;
+import java.util.Scanner;
 
-public class InsertInSorted extends SinglyLinkedlist {
-    
-    // insert a node in a sorted linkedList 
-    public ListNode insertInSortedLinkedList(int data){
-        ListNode newNode=new ListNode(data);
-        ListNode current=head;
-        ListNode temp=null;
-        while(current!=null && current.data<newNode.data){
-            temp=current;
-            current=current.next;
-        }
-        newNode.next=current;
-        temp.next=newNode;
-        return head;
-    }
-
+public class A_Odd_Set {
     public static void main(String[] args) {
-        
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int n= sc.nextInt();
+            int o=0;
+            int e=0;
+            for (int i = 0; i < 2*n; i++) {
+                int a= sc.nextInt();
+                if (a==1)
+                    o+=1;
+                else if(a%2==0)
+                    e+=1;
+                else
+                    o+=1;
+            }
+            if (o==e){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+
+        }
     }
-    
 }
