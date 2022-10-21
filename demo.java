@@ -37,5 +37,6 @@ class UserMainCode {
 
     public static void main(String[] args){
         System.out.println(toggleTheString("CHEnnAi",2));
+        System.out.println("Finish Successfully");
     }
 }
