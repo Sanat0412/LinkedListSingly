@@ -67,6 +67,10 @@ public class Delete extends SinglyLinkedlist {
     
 
     public static void main(String[] args) {
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.add(11);
+        ll.add(12);
+        System.out.println("Done");
         
     }
     
